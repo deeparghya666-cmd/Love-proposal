@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine's Proposal 💖</title>
+
+    <style>
+        body {
+            font-family: cursive;
+            text-align: center;
+            background-color: #ffe6f0;
+            padding: 50px;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #cc0066;
+            margin-bottom: 40px;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #yes-btn {
+            background-color: #ff4d88;
+            color: white;
+            margin-right: 20px;
+        }
+
+        #no-btn {
+            background-color: #f2f2f2;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My dear Ankita, will you be my Valentine? 💖</h1>
+
+    <button id="yes-btn" onclick="yesClicked()">Yes</button>
+    <button id="no-btn" onmouseover="noHover()">No</button>
+
+    <script>
+        function noHover() {
+            const noBtn = document.getElementById("no-btn");
+            const x = Math.random() * (window.innerWidth - 120);
+            const y = Math.random() * (window.innerHeight - 60);
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+
+        function yesClicked() {
+            window.location.href = "yes-page.html";
+        }
+    </script>
+
+</body>
+</html>
